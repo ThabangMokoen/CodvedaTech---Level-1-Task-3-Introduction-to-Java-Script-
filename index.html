@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Login Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- LOGIN CARD -->
+    <div class="card" id="loginCard">
+        <h2>Welcome Back</h2>
+        <p class="subtitle">Sign in to access your dashboard</p>
+
+        <form id="loginForm">
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Username">
+                <small class="error"></small>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password">
+                <small class="error"></small>
+            </div>
+
+            <button type="submit" class="primary-btn">Login</button>
+        </form>
+
+        <button id="openModal" class="link-btn">Forgot Password?</button>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div class="dashboard hidden" id="dashboard">
+        <h2>Dashboard</h2>
+        <p class="subtitle">Welcome, <span id="userDisplay">User</span></p>
+
+        <!-- Profile / Stats -->
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Projects</h3>
+                <p>12</p>
+            </div>
+            <div class="stat-card">
+                <h3>Tasks</h3>
+                <p>34</p>
+            </div>
+            <div class="stat-card">
+                <h3>Inbox</h3>
+                <p>7</p>
+            </div>
+        </div>
+
+        <!-- Dropdown -->
+        <div class="dropdown">
+            <button id="dropdownBtn" class="primary-btn">Select Role ▼</button>
+            <div id="dropdownMenu" class="dropdown-menu hidden">
+                <p>Admin</p>
+                <p>Editor</p>
+                <p>User</p>
+            </div>
+        </div>
+
+        <button id="logoutBtn" class="danger-btn">Logout</button>
+    </div>
+
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
